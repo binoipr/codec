@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #303e47;
+}
+
+a {
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: var(--dark-bg-color);
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid var(--dark-bg-color);
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+/* filter component */
+
+.filter__form input {
+  height: 50px;
+  width: 400px;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* component */
+
+/* Countries component */
+.countries__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  gap: 20px;
+  max-width: fit-contendefault;
+}
+
+.countries__list a {
+  cursor: default;
+}
+
+.countries__list article {
+  box-shadow: 0 10px 10px rgba(42, 65, 80, 0.5);
+}
+
+.countries__list-flag img {
+  border-radius: 5px 5px 0 0;
+  width: 400px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.countries__list-details {
+  background-color: #66829e;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  margin-top: -10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.countries__list-details h4 {
+  color: #d4c9c9;
+  padding-bottom: 5px;
+  margin: 10px 0;
+}
+
+.countries__list-details h4 span {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Media queries */
+@media (min-width: 640px) {
+  .countries__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .countries__list .countries__list-details {
+    margin: -10px 0 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .countries__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1366px) {
+  .countries__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .filter-form input {
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+.list-table {
+  border-collapse: collapse;
+}
+
+.list-table td,
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.list-table tbody > tr > td > img {
+  width: 100px;
+  height: 80px;
+}

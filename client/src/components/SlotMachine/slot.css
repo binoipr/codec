@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.slot__app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 25%;
+}
+
+.slot__app-containers {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  margin-top: 50px;
+}
+
+.slot__app-section {
+  position: relative;
+  border-radius: 10px !important;
+  border: 3px solid black !important;
+  width: 100%;
+  height: 175px;
+  overflow: hidden;
+  background-color: #a3c9d6;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  text-align: center;
+  font-size: 85px;
+  line-height: 150px;
+  cursor: default;
+  margin-bottom: 20px;
+}
+
+.slot__app-single-container {
+  position: relative;
+  top: 2px;
+  width: 100%;
+  transition: top ease-in-out 0.3s;
+  text-align: center;
+  align-items: baseline;
+}
+
+#slot__app-span {
+  font-size: 60px;
+  padding-bottom: 20px;
+  margin-top: 40px;
+}
+
+.roll {
+  width: 200px;
+  cursor: pointer;
+  background-color: #008cba;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.rolling {
+  animation: blinkingText 1.5s infinite;
+}
+
+.slot__app-info {
+  margin: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.slot__app-info .slot__app-result-span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+table {
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+}
+
+@keyframes blinkingText {
+  0% {
+    color: #000;
+  }
+  49% {
+    color: #000;
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: #000;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .slot__app-containers {
+    width: 330px;
+  }
+  .slot__app-section {
+    height: 150px;
+    line-height: 135px;
+  }
+  .roll {
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .slot__app-info {
+    font-size: 16px;
+  }
+}
